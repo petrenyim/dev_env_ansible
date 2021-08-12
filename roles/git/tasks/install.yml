@@ -1,0 +1,13 @@
+---
+- name: install packages
+  package:
+    name: "{{ packages }}"
+    state: present
+  become: yes
+
+- name: configure email
+  shell: git config --global user.email "petrenyimisi@gmail.com"
+
+- name: configure username
+  shell: git config --global user.name "Mihaly Petrenyi"
+

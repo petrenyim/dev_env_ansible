@@ -1,0 +1,12 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: yes
+  roles:
+    - { role: system, tags: system }
+    - { role: shell, tags: shell }
+    - { role: git, tags: git }
+    - { role: docker, tags: docker }
+    - { role: go, tags: go }
+    - { role: kubernetes, tags: kubernetes }
+

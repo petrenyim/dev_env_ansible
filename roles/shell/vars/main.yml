@@ -1,0 +1,11 @@
+---
+packages:
+  - zsh
+  - alacritty
+  - tmux
+  - git
+  - neovim
+  - cargo
+  - ripgrep
+  - fzf
+  - npm

@@ -1,0 +1,20 @@
+---
+- name: install kind go module
+  shell: go get sigs.k8s.io/kind
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/usr/local/go/bin"
+
+- name: install kubectl
+  get_url:
+    url: https://dl.k8s.io/release/v1.22.0/bin/linux/amd64/kubectl
+    dest: /usr/local/bin/kubectl
+    mode: 0777
+  become: yes
+
+- name: install kubebuilder
+  get_url:
+    url: https://go.kubebuilder.io/dl/latest/linux/amd64
+    dest: /usr/local/bin/kubebuilder
+    mode: 0777
+  become: yes
+

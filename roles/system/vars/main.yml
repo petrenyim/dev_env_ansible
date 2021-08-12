@@ -1,0 +1,5 @@
+---
+packages:
+  - mlocate
+  - curl
+  - python3-pip

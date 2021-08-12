@@ -1,0 +1,10 @@
+---
+- name: install packages
+  package:
+    name: "{{ packages }}"
+    state: present
+  become: yes
+
+#- name: update mlocate database
+#  shell: updatedb
+#  become: yes

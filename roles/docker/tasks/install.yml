@@ -1,0 +1,6 @@
+---
+- name: install packages
+  package:
+    name: "{{ packages }}"
+    state: present
+  become: yes
