@@ -1,0 +1,14 @@
+---
+- name: install packages
+  package:
+    name: "{{ packages }}"
+    state: present
+  become: yes
+
+- name: copy requirements
+  copy:
+    src: requirements.txt
+    dest: /tmp/requirements.txt
+
+- name: install python modules
+  shell: pip3 install -r /tmp/requirements.txt

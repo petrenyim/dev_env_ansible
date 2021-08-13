@@ -6,6 +6,8 @@
     - { role: system, tags: system }
     - { role: shell, tags: shell }
     - { role: git, tags: git }
+    - { role: python, tags: python }
+    - { role: vscode, tags: vscode }
     - { role: docker, tags: docker }
     - { role: go, tags: go }
     - { role: kubernetes, tags: kubernetes }
