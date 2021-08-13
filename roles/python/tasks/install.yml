@@ -3,7 +3,7 @@
   package:
     name: "{{ packages }}"
     state: present
-  become: yes
+  become: true
 
 - name: copy requirements
   copy:
@@ -15,4 +15,4 @@
     requirements: /tmp/requirements.txt
     state: present
     executable: pip3
-  become: yes
+  become: true

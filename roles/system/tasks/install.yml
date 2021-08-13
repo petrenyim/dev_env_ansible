@@ -3,8 +3,8 @@
   package:
     name: "{{ packages }}"
     state: present
-  become: yes
+  become: true
 
-#- name: update mlocate database
+# - name: update mlocate database
 #  shell: updatedb
-#  become: yes
+#  become: true

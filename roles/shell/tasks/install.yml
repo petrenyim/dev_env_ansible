@@ -2,35 +2,35 @@
 - name: add alacritty repository
   apt_repository:
     repo: ppa:mmstick76/alacritty
-  become: yes
+  become: true
 
 - name: install packages
   package:
     name: "{{ packages }}"
     state: present
-  become: yes
+  become: true
 
 - name: change default shell to zsh
   shell: "chsh -s /usr/bin/zsh {{ ansible_user }}"
-  become: yes
+  become: true
 
 - name: install du-dust
   shell: cargo install du-dust
-  become: yes
+  become: true
 
 - name: download z
   get_url:
     url: https://raw.githubusercontent.com/rupa/z/master/z.sh
     dest: /usr/bin/z
     mode: 0777
-  become: yes
+  become: true
 
 - name: download antigen
   get_url:
     url: https://git.io/antigen
     dest: /usr/bin/antigen.zsh
     mode: 0777
-  become: yes
+  become: true
 
 - name: create .dotfiles directory
   file:
@@ -65,5 +65,3 @@
   copy:
     src: alacritty.yml
     dest: ~/.config/alacritty/alacritty.yml
-
-

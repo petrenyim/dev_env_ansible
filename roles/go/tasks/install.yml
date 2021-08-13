@@ -8,6 +8,4 @@
   unarchive:
     src: /tmp/go1.16.7.linux-amd64.tar.gz
     dest: /usr/local
-  become: yes
-
-
+  become: true

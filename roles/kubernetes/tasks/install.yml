@@ -9,12 +9,11 @@
     url: https://dl.k8s.io/release/v1.22.0/bin/linux/amd64/kubectl
     dest: /usr/local/bin/kubectl
     mode: 0777
-  become: yes
+  become: true
 
 - name: install kubebuilder
   get_url:
     url: https://go.kubebuilder.io/dl/latest/linux/amd64
     dest: /usr/local/bin/kubebuilder
     mode: 0777
-  become: yes
-
+  become: true

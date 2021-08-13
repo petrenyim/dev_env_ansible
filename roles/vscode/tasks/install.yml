@@ -1,9 +1,11 @@
 ---
 - name: download vscode
   get_url:
-    url: https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+    url: >-
+      https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
     dest: /tmp/code_amd64.deb
 
 - name: install vscode
-  shell: dpkg -i /tmp/code_amd64.deb
-  become: yes
+  apt:
+    deb: /tmp/code_amd64.deb
+  become: true

@@ -3,11 +3,10 @@
   package:
     name: "{{ packages }}"
     state: present
-  become: yes
+  become: true
 
 - name: configure email
   shell: git config --global user.email "petrenyimisi@gmail.com"
 
 - name: configure username
   shell: git config --global user.name "Mihaly Petrenyi"
-
