@@ -11,4 +11,7 @@
     dest: /tmp/requirements.txt
 
 - name: install python modules
-  shell: pip3 install -r /tmp/requirements.txt
+  pip:
+    requirements: /tmp/requirements.txt
+    state: present
+  become: yes
