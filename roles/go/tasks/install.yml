@@ -13,4 +13,4 @@
 - name: add kind (go) to path
   lineinfile:
     dest: ~/.zshrc
-    line: PATH="${PATH}:/usr/local/go/bin:~/go/bin"
+    line: PATH="${PATH}:/usr/local/go/bin:/home/{{ ansible_user }}/go/bin"
