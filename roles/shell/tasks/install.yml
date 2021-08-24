@@ -11,7 +11,7 @@
   become: true
 
 - name: change default shell to zsh
-  shell: "chsh -s /usr/bin/zsh {{ ansible_user }}"
+  shell: "chsh -s /usr/bin/zsh {{ ansible_env.USER }}"
   become: true
 
 - name: install du-dust
