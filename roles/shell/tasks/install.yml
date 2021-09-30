@@ -2,6 +2,7 @@
 - name: add alacritty repository
   apt_repository:
     repo: ppa:mmstick76/alacritty
+    codename: focal 
   become: true
 
 - name: install packages
